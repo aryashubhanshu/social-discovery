@@ -5,3 +5,4 @@
 - NextJS
 - Supabase
 - Tailwind CSS
+- AntiGravity
