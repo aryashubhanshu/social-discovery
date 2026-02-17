@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Outfit, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AuthProvider } from '@/context/auth-context';
+import Navbar from '@/components/Navbar';
 
 const outfit = Outfit({
     variable: '--font-sans',
@@ -29,7 +30,10 @@ export default function RootLayout({
                 className={`${outfit.variable} ${geistMono.variable} antialiased h-full`}
             >
                 <AuthProvider>
-                    <div className="h-full flex flex-col">{children}</div>
+                    <div className="h-full flex flex-col">
+                        <Navbar />
+                        {children}
+                    </div>
                 </AuthProvider>
             </body>
         </html>
